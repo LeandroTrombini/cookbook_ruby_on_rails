@@ -1,0 +1,24 @@
+<h1>Livro de receitas</h1>  
+  <table class="table ">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      
+    </tr>
+<% @recipes.each do |recipe| %> 
+  </thead>
+   <tbody>
+    <tr>
+     
+      <td scope="row" ><%= link_to recipe.name, recipe, class: "index-link" %></td>
+      <td ><%= link_to 'Editar', edit_recipe_path(recipe), class: "index-link" %></td>
+      <td ><%= link_to 'Apagar', recipe_path(recipe), method: :delete, class: "index-link", data: { confirm: 'Quer apagar essa tarefa?' } %></td>
+    </tr>
+   </tbody>
+  
+  <br /> 
+<% end %>
+</table>
+
