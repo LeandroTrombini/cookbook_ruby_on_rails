@@ -1,23 +1,31 @@
+<h1>Editar receita</h1>  
+
 <%= form_with model: @recipe do | f | %>
+  <div class="field form-group">  
     <%= f.label 'Nome' %>
-    <%= f.text_field :name %>
-
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+  <div class="field form-group">
     <%= f.label 'Tipo de receita' %>
-    <%= f.text_field :recipe_type %>
-
+    <%= f.text_field :recipe_type, class:"form-control" %>
+  </div>
+  <div class="field form-group">
     <%= f.label 'Culinária' %>
-    <%= f.text_field :cuisine %>
-
+    <%= f.text_field :cuisine, class:"form-control" %>
+  </div>
+  <div class="field form-group">
     <%= f.label 'Ingredientes' %>
-    <%= f.text_area :ingredients %>
-
+    <%= f.text_area :ingredients, class:"form-control" %>
+  </div>
+  <div class="field form-group">
     <%= f.label 'Modo de preparo' %>
-    <%= f.text_field :cook_method %>
-
+    <%= f.text_field :cook_method, class:"form-control" %>
+  </div>
+  <div class="field form-group">
     <%= f.label 'Tempo de preparo' %>
-    <%= f.number_field :cook_time %>
-
-
-    <%= f.submit 'Editar' %>
-    
+    <%= f.number_field :cook_time, class:"form-control" %>
+  </div><br />
+  <div class="actions">
+    <%= f.submit 'Editar', class:"btn btn-primary" %>
+  </div>
 <% end %>

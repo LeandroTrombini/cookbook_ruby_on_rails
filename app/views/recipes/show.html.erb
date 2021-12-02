@@ -22,10 +22,11 @@
     <dd>
        <strong>Tempo de preparo: </strong><%= @recipe.cook_time %> 
     </dd>
+    <br />
 
      
 </dl>
 
      <%= link_to 'Editar', edit_recipe_path, class: "index-link btn btn-primary" %>
-     <%= link_to 'Apagar', recipe_path, method: :delete, class: "index-link btn btn-danger", data: { confirm: 'Quer apagar essa tarefa?' } %> 
+     <%= link_to 'Apagar', recipe_path, method: :delete, class: "index-link btn btn-danger", data: { confirm: 'Deseja apagar essa tarefa?' } %> 
 </div>
