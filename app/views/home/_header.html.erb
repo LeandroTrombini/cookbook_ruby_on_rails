@@ -11,14 +11,13 @@
         </li>
         <li class="nav-item">
           <%= link_to 'Cadastrar nova receita', new_recipe_path, class: "index-link" %>
-        </li>
-        
-       
+        </li>       
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
-        <button class="btn btn-outline-success" type="submit">Procurar</button>
-      </form>
+      
+      <%= form_with url: search_path, class:"d-flex", method: :get do %>        
+        <%= text_field_tag :q   %>
+        <%= submit_tag 'Pesquisar', class:"btn btn-outline-success" %>
+      <% end %>
     </div>
   </div>
 </nav>

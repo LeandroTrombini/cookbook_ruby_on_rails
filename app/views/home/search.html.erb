@@ -1,0 +1,23 @@
+<h1>Resultados da busca</h1>  
+  <table class="table ">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      
+    </tr>
+<% @recipes.each do |recipe| %> 
+  </thead>
+   <tbody>
+    <tr>
+     
+      <td scope="row" ><%= recipe.name %>, <%= recipe.recipe_type %></td>
+      <td ><%= link_to 'Editar', edit_recipe_path(recipe), class: "index-link btn btn-primary" %></td>
+      <td ><%= link_to 'Apagar', recipe_path(recipe), method: :delete, class: "index-link btn btn-danger", data: { confirm: 'Deseja apagar essa tarefa?' } %></td>
+    </tr>
+   </tbody>
+  
+  <br /> 
+<% end %>
+</table>
